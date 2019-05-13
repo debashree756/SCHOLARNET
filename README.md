@@ -29,7 +29,7 @@ Displaying Scholarship Approval Status
  
  Using contract address and ABI this application links to blockchain.
  
- ![picture](img/workflow.jpeg)
+ ![picture](img/workflow.jpg)
  
  
 
