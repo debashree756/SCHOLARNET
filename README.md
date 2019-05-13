@@ -17,7 +17,7 @@ Verifying the information provided by sponsors and sponsorship seekers by using 
  database used is phpmyadmin database
 
 
-![picture](sm.jpg)
+![picture](src/sm.jpg)
  
  
 
