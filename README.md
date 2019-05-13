@@ -31,6 +31,25 @@ Displaying Scholarship Approval Status
  
  ![picture](img/workflow.jpg)
  
+ Minimum Hardware Requirements:
+Processor:Intel core i3
+RAM:2GB
+
+Software Requirements:
+Operating System:Windows 8
+Notepad++ v7.5.8
+Metamask v4.8.0
+Npm package manager v4.0.0
+Remix IDE  v0.7.5
+Truffle-testrpc v0.0.10
+
+Languages used:
+HTML
+CSS
+PHP
+Solidity  v0.4.24 (and above)
+
+ 
  
 
 
