@@ -1,5 +1,5 @@
 
-# Scholarnet-php
+# Scholarnet
 An Online Scholarship Management Portal
 
 ScholarNet, a Decentralized application is a common portal created by using BlockChain where the students can apply for the available scholarships and sponsors 
