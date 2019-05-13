@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<center>
+    <form action="php/login.php" method="POST" onsubmit="login()">
+        <legend>Login</legend>
+
+        <div class="form-group">
+            <label >Username:
+                <input type="text" class="form-control" id="username" name="username" placeholder="john.g.uk" required>
+            </label>
+            <br>
+            <label >Password:
+                <input type="password" class="form-control"  required id="password" name="password" placeholder="Password">
+            </label>
+            <br>
+            <input type="submit" value="login" value="Login" class="btn btn-primary" >
+        </div>
+    </form>   
+</center>	
+</body>
+<!--jquery -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<!--Bootstrap -->
+<!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha1.js"></script>
+<script>
+    function login(){
+        var password = document.getElementById("password").value;
+        password=CryptoJS.SHA1(password);
+        document.getElementById("password").value=""+password;
+    }
+</script>
+</html>

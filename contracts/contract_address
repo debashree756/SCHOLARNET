@@ -1,0 +1,352 @@
+contract address = 0x222966F68E3Ec416582B5653caFD3F1692Fbb3af;
+
+
+
+abi= [
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"name": "dob",
+				"type": "uint256"
+			},
+			{
+				"name": "typef",
+				"type": "string"
+			},
+			{
+				"name": "aadhaarNo",
+				"type": "uint256"
+			},
+			{
+				"name": "SSC",
+				"type": "uint256"
+			},
+			{
+				"name": "HSC",
+				"type": "uint256"
+			},
+			{
+				"name": "currentedu_year",
+				"type": "string"
+			},
+			{
+				"name": "marksheet",
+				"type": "uint256"
+			},
+			{
+				"name": "income",
+				"type": "uint256"
+			},
+			{
+				"name": "income_cert",
+				"type": "uint256"
+			}
+		],
+		"name": "_setStudentInfo",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "dateOfBirth",
+				"type": "uint256"
+			},
+			{
+				"name": "typef",
+				"type": "string"
+			},
+			{
+				"name": "aadhaarNo",
+				"type": "uint256"
+			},
+			{
+				"name": "SSCScore",
+				"type": "uint256"
+			},
+			{
+				"name": "HSCScore",
+				"type": "uint256"
+			},
+			{
+				"name": "currentedu_year",
+				"type": "string"
+			},
+			{
+				"name": "marksheet",
+				"type": "uint256"
+			},
+			{
+				"name": "annualIncome",
+				"type": "uint256"
+			},
+			{
+				"name": "income_cert",
+				"type": "uint256"
+			}
+		],
+		"name": "getStudentData",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "getAadhaar",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "getDob",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "getEducationandYear",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "getHSC",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "getIncome",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "getName",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "getsIncomecerti",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "getSSC",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "getType",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "stuCount",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "students",
+		"outputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "dateOfBirth",
+				"type": "uint256"
+			},
+			{
+				"name": "typef",
+				"type": "string"
+			},
+			{
+				"name": "aadhaarNo",
+				"type": "uint256"
+			},
+			{
+				"name": "SSCScore",
+				"type": "uint256"
+			},
+			{
+				"name": "HSCScore",
+				"type": "uint256"
+			},
+			{
+				"name": "currentedu_year",
+				"type": "string"
+			},
+			{
+				"name": "marksheet",
+				"type": "uint256"
+			},
+			{
+				"name": "annualIncome",
+				"type": "uint256"
+			},
+			{
+				"name": "income_cert",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+
+
+
+
+
+

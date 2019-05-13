@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Business Casual - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.min.css" rel="stylesheet">
+
+    <script>
+      const contract_address = "0x222966F68E3Ec416582B5653caFD3F1692Fbb3af"; 
+
+
+
+
+
+
+      const abi =[
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "name": "dob",
+        "type": "uint256"
+      },
+      {
+        "name": "typef",
+        "type": "string"
+      },
+      {
+        "name": "aadhaarNo",
+        "type": "uint256"
+      },
+      {
+        "name": "SSC",
+        "type": "uint256"
+      },
+      {
+        "name": "HSC",
+        "type": "uint256"
+      },
+      {
+        "name": "currentedu_year",
+        "type": "string"
+      },
+      {
+        "name": "marksheet",
+        "type": "uint256"
+      },
+      {
+        "name": "income",
+        "type": "uint256"
+      },
+      {
+        "name": "income_cert",
+        "type": "uint256"
+      }
+    ],
+    "name": "_setStudentInfo",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "dateOfBirth",
+        "type": "uint256"
+      },
+      {
+        "name": "typef",
+        "type": "string"
+      },
+      {
+        "name": "aadhaarNo",
+        "type": "uint256"
+      },
+      {
+        "name": "SSCScore",
+        "type": "uint256"
+      },
+      {
+        "name": "HSCScore",
+        "type": "uint256"
+      },
+      {
+        "name": "currentedu_year",
+        "type": "string"
+      },
+      {
+        "name": "marksheet",
+        "type": "uint256"
+      },
+      {
+        "name": "annualIncome",
+        "type": "uint256"
+      },
+      {
+        "name": "income_cert",
+        "type": "uint256"
+      }
+    ],
+    "name": "getStudentData",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "i",
+        "type": "uint256"
+      }
+    ],
+    "name": "getAadhaar",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "i",
+        "type": "uint256"
+      }
+    ],
+    "name": "getDob",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "i",
+        "type": "uint256"
+      }
+    ],
+    "name": "getEducationandYear",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "i",
+        "type": "uint256"
+      }
+    ],
+    "name": "getHSC",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "i",
+        "type": "uint256"
+      }
+    ],
+    "name": "getIncome",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "i",
+        "type": "uint256"
+      }
+    ],
+    "name": "getName",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "i",
+        "type": "uint256"
+      }
+    ],
+    "name": "getsIncomecerti",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "i",
+        "type": "uint256"
+      }
+    ],
+    "name": "getSSC",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "i",
+        "type": "uint256"
+      }
+    ],
+    "name": "getType",
+    "outputs": [
+      {
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "stuCount",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "students",
+    "outputs": [
+      {
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "name": "dateOfBirth",
+        "type": "uint256"
+      },
+      {
+        "name": "typef",
+        "type": "string"
+      },
+      {
+        "name": "aadhaarNo",
+        "type": "uint256"
+      },
+      {
+        "name": "SSCScore",
+        "type": "uint256"
+      },
+      {
+        "name": "HSCScore",
+        "type": "uint256"
+      },
+      {
+        "name": "currentedu_year",
+        "type": "string"
+      },
+      {
+        "name": "marksheet",
+        "type": "uint256"
+      },
+      {
+        "name": "annualIncome",
+        "type": "uint256"
+      },
+      {
+        "name": "income_cert",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }
+];
+        let contract;
+        window.addEventListener('load', () => {
+          if(typeof(web3) == 'undefined') {
+            return console.log("Metamask is not installed");
+          }
+        });
+
+        contract = web3.eth.contract(abi).at(contract_address);
+
+        function setMessage() {
+          console.log("HELLOOOOOO");
+          let app_name = $('#app_name').val();
+          let dob = $('#dob').val();
+          let type = $('#type').val();
+          let aadhar = $('#aadhar').val();
+          let ssc = $('#ssc').val();
+          let hsc = $('#hsc').val();
+          let year = $('#year').val();
+          let marksheet = $('#marksheet').val();
+          let income = $('#income').val();
+          let income_cert = $('#income_cert').val();
+
+          contract._setStudentInfo.sendTransaction(
+            app_name, dob, type, aadhar, ssc, hsc, year, marksheet, income, income_cert,
+            {gasPrice: web3.toWei(4.1, 'Gwei')},
+            (error, result) => {
+              if(error) {
+                return console.log(error);
+              }
+              console.log("txHash: " + result);
+            }
+          );
+        } 
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-upper text-primary mb-3">An Online Scholarship Management Portal</span>
+      <span class="site-heading-lower">Scholarnet</span>
+    </h1>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="about.html">About</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="store.html">Logout</a>
+            </li>
+                      </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-section cta">
+      <div class="container">
+        <div class="cta-inner text-center rounded">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+
+            <center>
+              <h2 class="section-heading mb-5">
+                <span class="section-heading-lower">STUDENT</span>
+                <span class="section-heading-upper">Details Registration</span>
+                
+              </h2>
+<form id = "formId"  method="POST"  align = "center"  action ="studentdetails.php" autocomplete="on" >
+  
+  <fieldset align = "center">
+    <legend>Personal Details</legend>
+    <label>Applicant Name :</label><br>
+    <input type="text" id="app_name" name="name" required autofocus > <br><br>
+    <label>Date of Birth :</label><br>
+    <input type="number" id="dob" name="dob"  placeholder="dd/mm/yyyy"   required autofocus> <br><br>
+  </fieldset>
+  <fieldset>
+      
+  <label>Type of Scholarship you wish to apply: </label><br>
+  <br>
+    <input type="text" id="type" name="type" required autofocus placeholder="income or merit">
+        <br>
+      </fieldset>
+
+      <fieldset >
+          <legend>Unique Identification</legend>
+          <label>Aadhaar Card Number :</label><br>
+          <input type="number" name="aadhar" size="30" id="aadhar" placeholder="eg: 123"  required autofocus >
+          <br><br>
+      </fieldset>
+
+  <fieldset>
+    <legend>Educational Details</legend>
+    <label>10<sup>th</sup> Percentage :</label><br>
+    <input type="number" min = "0" max = "100" name="ssc_per" id="ssc"  required autofocus>  <br><br>
+    <label>12<sup>th</sup> Percentage :</label><br>
+    <input type="number" min = "0" max = "100" id="hsc"  name ="hsc_per" required autofocus >  <br><br>
+    <label>Current Education pursuing and year of education :</label><br>
+    <input type="text" id="year" name="edu" required autofocus>  <br><br>
+     <label>Enter your Marksheet Number :</label><br>
+    <input type="number" id="marksheet" name="mno" required autofocus>  <br><br>
+  </fieldset>
+
+  <fieldset>
+      <legend>Income Details</legend>
+  
+    <label>Family's Income per annum :</label><br>
+    <input type="number" id="income"  name="income" placeholder="Enter income in figures" > <br><br>
+
+<label>Enter your Income Certificate Number :</label><br>
+    <input type="number" id="income_cert"  name="incno"  > <br><br>
+
+     <label>Approval Status(by-default) :</label><br>
+    <input  type="text"  value="no" name="no" autocomplete="on"  placeholder="no">  <br><br>
+    
+    
+  </fieldset>
+  <button onclick="setMessage()"> Submit </button>
+  <input type = "reset">
+</form> 
+
+</center> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0 small">Copyright &copy; Your Website 2019</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!--jquery -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<!--Bootstrap -->
+<!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+
+
+  </body>
+
+  <!-- Script to highlight the active date in the hours list -->
+  <script>
+    $('.list-hours li').eq(new Date().getDay()).addClass('today');
+  </script>
+
+</html>
